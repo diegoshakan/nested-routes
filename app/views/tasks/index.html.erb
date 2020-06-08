@@ -1,0 +1,11 @@
+<h1>Tasks</h1>
+
+<%= link_to "Nova Task", new_task_path %>
+
+<% @tasks.each do |t| %>
+  <p> <%= link_to t.title, t %> </p>
+  <p> <%= t.description %></p>
+  <p> <small>Criado há <%= time_ago_in_words(t.created_at) %></small> </p>
+  <small> Comentários: <%= t.comments.all.size %> </small>
+  <hr />
+<% end %>

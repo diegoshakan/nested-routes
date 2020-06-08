@@ -1,0 +1,4 @@
+<%= simple_form_for [@task, @task.comments.build] do |f| %>
+    <%= f.input :description_content %>
+    <%= f.button :submit %>
+<% end %>

@@ -1,0 +1,8 @@
+<% @task.comments.each do |tc| %>
+  <div class="container">
+    <p id="show-comment"> <%= tc.description_content %>  </p>
+    <%= link_to "Editar", edit_task_comment_path(@task, tc) %>
+    <%= link_to "Deletar", [@task, tc], method: :delete, data: {confirm: 'Tem certeza que deseja deletar este comentário?'} %>
+  </div>
+<% end %>
+
