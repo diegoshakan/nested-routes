@@ -12,7 +12,7 @@ class CommentsController < ApplicationController
   end
 
   def update
-    @comment.update(comments_params)
+    @comment.update(comment_params)
 
     redirect_to task_path(@task)
   end

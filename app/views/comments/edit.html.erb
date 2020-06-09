@@ -1,4 +1,8 @@
 <h1>Editar <%= @task.comments.ids[0] %> </h1>
-<%= render 'form' %>
+
+<%= simple_form_for([@task, @comment]) do |f| %>
+    <%= f.input :description_content %>
+    <%= f.button :submit %>
+<% end %>
 
 <%= link_to "Voltar", task_path(@task) %>
